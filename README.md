@@ -1,3 +1,5 @@
+[![Rust CI/CD](https://github.com/nogibjj/arko_python_to_rust/actions/workflows/CICD-rust.yml/badge.svg)](https://github.com/nogibjj/arko_python_to_rust/actions/workflows/CICD-rust.yml)
+[![Python CI/CD](https://github.com/nogibjj/arko_python_to_rust/actions/workflows/CICD-python.yml/badge.svg)](https://github.com/nogibjj/arko_python_to_rust/actions/workflows/CICD-python.yml)
 # Performance Comparison of Rust and Python Data Processing Scripts
 
 This report documents the performance comparison between the Rust and Python implementations for processing `AAPL.csv` data. Each script calculates the average closing price of Apple's stock, with execution time and resource usage recorded for comparison.
@@ -13,6 +15,16 @@ This report documents the performance comparison between the Rust and Python imp
   - **Rust**: `polars`
   - **Python**: `pandas`
 
+## Setup
+
+
+```
+git clone https://github.com/nogibjj/arko_python_to_rust.git
+cd arko_python_to_rust
+make rust_all
+make all
+```
+
 ## Results
 
 ### Execution Time
@@ -22,6 +34,11 @@ This report documents the performance comparison between the Rust and Python imp
 | Execution Time       |`274.328665`       |`2040`             |
 | Average Close Price  |`87.25658896034298`|`87.25658896034298`|
 
+![image](https://github.com/user-attachments/assets/50077fff-8182-4f27-8561-81ccfee74d7e)
+
+![image](https://github.com/user-attachments/assets/198756b7-9af0-4f03-9f85-c91207a7a7f6)
+
+
 ### Memory Usage (Optional)
 
 If you’ve measured memory, add a table here:
@@ -29,6 +46,10 @@ If you’ve measured memory, add a table here:
 | Metric               | Rust (MB)         | Python (MB)       |
 |----------------------|-------------------|-------------------|
 | Peak Memory Usage    | `30.8`            | `5.52`            |
+
+![image](https://github.com/user-attachments/assets/d83e64f5-c082-49f6-8dce-e05485dd3913)
+
+![image](https://github.com/user-attachments/assets/198756b7-9af0-4f03-9f85-c91207a7a7f6)
 
 ## Observations
 
