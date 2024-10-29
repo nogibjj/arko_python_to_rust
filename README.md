@@ -24,7 +24,15 @@ cd arko_python_to_rust
 make rust_all
 make all
 ```
-
+Note:
+for visualizing rust memory utilization: (the massif.out.<pid> file gets generated)
+```
+sudo apt-get update
+sudo apt-get install valgrind
+cargo build --release
+valgrind --tool=massif target/release/aapl_data_processor
+massif-visualizer massif.out.<pid>
+```
 ## Results
 
 ### Execution Time
