@@ -1,0 +1,10 @@
+[package]
+name = "aapl_data_processor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+polars = "0.25.1"
+
+[dev-dependencies]
+assert_approx_eq = "1.1"
