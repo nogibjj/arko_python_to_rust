@@ -12,7 +12,6 @@ rust_test:
 
 rust_run:
 	cargo run --release
-	valgrind --tool=massif target/release/aapl_data_processor
 
 rust_build:
 	cargo build --release
@@ -31,15 +30,15 @@ install:
 
 test: 
 	. testenv/bin/activate && \
-		python -m pytest -vv --cov=main --cov=mypackage test_*.py
+		python -m pytest -vv --cov=main --cov=scripts test_*.py
 
 format:	
 	. testenv/bin/activate && \
-		black *.py 
+		black scripts/*.py 
 
 lint: 
 	. testenv/bin/activate && \
-		ruff check *.py mypackage/*.py
+		ruff check scripts/*.py
 
 container-lint: 
 	docker run --rm -i hadolint/hadolint < .devcontainer/Dockerfile
